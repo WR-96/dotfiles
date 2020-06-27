@@ -1,5 +1,0 @@
-Bundle 'hzchirs/vim-material'
-
-UnBundle 'altercation/vim-colors-solarized'
-UnBundle 'spf13/vim-colors'
-UnBundle 'flazz/vim-colorschemes'
