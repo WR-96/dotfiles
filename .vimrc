@@ -31,6 +31,12 @@ Plugin 'dense-analysis/ale'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Ale
+let g:ale_python_pylint_options =
+    \ '--rcfile=/.repo_requirements/linit_hook/travis/cfg/travis_run_pylint_vim.cfg --valid_odoo_versions=12.0'
+let g:ale_python_flake8_options =
+    \ '--config=/.repo_requirements/linit_hook/travis/cfg/travis_run_flake8.cfg'
+
 " Vim Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,vue,xml EmmetInstall
