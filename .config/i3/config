@@ -13,6 +13,10 @@ set $mod Mod4
 set $alt Mod1
 set $wallpaper /home/williams/Pictures/Wallpapers/Harley-Davidson-Fat-Bob.jpg
 
+# Siji font setup
+
+exec --no-startup-id xset +fp /home/williams/.local/share/fonts
+exec --no-startup-id xset fp rehash
 
 font pango:Hack 14
 
@@ -22,6 +26,8 @@ smart_borders on
 gaps inner 12
 
 # Startup applications
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale $wallpaper
 exec_always --no-startup-id nm-applet
 exec --no-startup-id compton
@@ -172,12 +178,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start i3bar
-bar {
-  status_command i3status
-  separator_symbol "  "
+# bar {
 
-  colors {
-    background #383c4a
-    separator #5294e2
-  }
-}
+#   status_command i3status
+#   separator_symbol "  "
+
+#   colors {
+#     background #383c4a
+#     separator #5294e2
+#   }
+# }
