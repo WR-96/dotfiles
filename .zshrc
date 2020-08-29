@@ -86,6 +86,22 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# travis2docker config
+DOCKER_PATH="${HOME}/t2d"
+
+# Pyenv config
+export PATH="/home/williams/.pyenv/bin:$PATH"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# nvm config
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -98,13 +114,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.odoo_aliases
-
-# travis2docker config
-DOCKER_PATH="${HOME}/t2d"
+alias lcat='lolcat'
+alias config='/usr/bin/git --git-dir=/home/williams/.cfg/ --work-tree=/home/williams'
+alias lf='ls -p | grep -v / '
 alias t2d="travisfile2dockerfile --root-path=${DOCKER_PATH} --run-extra-args='-it -e LANG=en_US.UTF-8' --add-remote=vauxoo"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias config='/usr/bin/git --git-dir=/home/williams/.cfg/ --work-tree=/home/williams'
+# Python alias
+alias python="python3"
+alias pip="python3 -m pip"
