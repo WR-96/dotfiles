@@ -113,7 +113,6 @@ export NVM_DIR="$HOME/.nvm"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.odoo_aliases
 alias lcat='lolcat'
 alias config='/usr/bin/git --git-dir=/home/williams/.cfg/ --work-tree=/home/williams'
 alias lf='ls -p | grep -v / '
