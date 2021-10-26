@@ -18,7 +18,6 @@ Plugin 'itchyny/vim-gitbranch'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'hzchirs/vim-material'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -29,6 +28,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'dense-analysis/ale'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
+Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,7 +67,7 @@ let g:lightline = {
 
 syntax on
 set background=dark
-colorscheme vim-material
+colorscheme nord
 
 if (has("termguicolors"))
   set termguicolors
