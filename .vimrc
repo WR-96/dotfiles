@@ -41,6 +41,9 @@ let g:indent_guides_guide_size = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,vue,xml EmmetInstall
 
+" Snipmate
+let g:snipMate = { 'snippet_version' : 1 }
+
 " GitGutter settings
 set updatetime=100
 let g:gitgutter_max_signs = 500
